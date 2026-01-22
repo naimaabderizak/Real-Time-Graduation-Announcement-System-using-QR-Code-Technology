@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Project Presentation</title>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --accent-color: #4f46e5;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.15) 0%, transparent 40%);
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: var(--text-dim);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 32px;
+            margin-top: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-item i {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(79, 70, 229, 0.2);
+            border: 1px solid var(--accent-color);
+            border-radius: 50px;
+            margin: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background: var(--accent-color);
+            transition: width 0.3s;
+            z-index: 101;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide.active * {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-bar" id="progress"></div>
+
+    <div class="presentation-container" id="container">
+        <!-- Slide 1: Welcome -->
+        <section class="slide active">
+            <i data-lucide="graduation-cap" size="80" style="color: var(--accent-color); margin-bottom: 2rem;"></i>
+            <h1>Smart Graduation System</h1>
+            <p>Revolutionizing Commencements with Real-time Automation and Smart Interaction.</p>
+            <div style="margin-top: 3rem; color: var(--text-dim);">Presented by: Eng. Fahad</div>
+        </section>
+
+        <!-- Slide 2: The Problem -->
+        <section class="slide">
+            <h2>The Challenge</h2>
+            <div class="card text-start">
+                <div class="d-flex align-items-start gap-4 mb-4">
+                    <i data-lucide="alert-triangle" color="#f87171"></i>
+                    <p style="text-align: left; font-size: 1.3rem;">Manual student tracking causes delays, mispronunciations, and organizational chaos during large ceremonies.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left;">
+                    <div class="feature-item">❌ Manual list checking</div>
+                    <div class="feature-item">❌ Name mispronunciations</div>
+                    <div class="feature-item">❌ Delay in screen updates</div>
+                    <div class="feature-item">❌ Poor data synchronization</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: The Solution -->
+        <section class="slide">
+            <h2>The Smart Solution</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i data-lucide="zap" size="40"></i>
+                    <h3>Zero Delay</h3>
+                    <p style="font-size: 1rem;">Real-time synchronization using WebSocket technology.</p>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="mic" size="40"></i>
+                    <h3>AI Voice</h3>
+                    <p style="font-size: 1rem;">Automatic name announcement with Phonetic correction.</p>
+                </div>
+                <div class="feature-item">
+                    <i data-lucide="qr-code" size="40"></i>
+                    <h3>QR Integration</h3>
+                    <p style="font-size: 1rem;">Seamless student identification via secure QR scanning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Technology Stack -->
+        <section class="slide">
+            <h2>Technology Stack</h2>
+            <div class="card">
+                <div style="margin-bottom: 2rem;">
+                    <span class="tech-tag">PHP (Admin)</span>
+                    <span class="tech-tag">Python (Engine)</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Socket.io</span>
+                </div>
+                <div>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JavaScript (ES6+)</span>
+                    <span class="tech-tag">HTML5/CSS3</span>
+                    <span class="tech-tag">Lucide Icons</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: System Architecture -->
+        <section class="slide">
+            <h2>Architecture Flow</h2>
+            <div class="card" style="padding: 2rem;">
+                <div style="display: flex; justify-content: space-around; align-items: center;">
+                    <div><i data-lucide="database"></i><br>Admin DB</div>
+                    <i data-lucide="arrow-right"></i>
+                    <div><i data-lucide="terminal"></i><br>Python Server</div>
+                    <i data-lucide="arrow-right"></i>
+                    <div><i data-lucide="scan"></i><br>Scanner App</div>
+                    <i data-lucide="arrow-right"></i>
+                    <div><i data-lucide="monitor"></i><br>Grand Screen</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Thank You -->
+        <section class="slide">
+            <h1>Thank You!</h1>
+            <p>Questions? Let's build the future of education together.</p>
+            <div class="card" style="max-width: 400px; margin-top: 3rem;">
+                <p style="font-size: 1.2rem;">Ready for Demo?</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="controls">
+        <button class="nav-btn" onclick="prevSlide()"><i data-lucide="chevron-left"></i></button>
+        <button class="nav-btn" onclick="nextSlide()"><i data-lucide="chevron-right"></i></button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+        const container = document.getElementById('container');
+        const slides = document.querySelectorAll('.slide');
+        const progress = document.getElementById('progress');
+
+        function updateSlide() {
+            container.style.transform = `translateX(-${currentSlide * 100}vw)`;
+            slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+            progress.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
