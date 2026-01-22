@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 0: Title -->
+        <div class="slide active" id="slide-0">
+            <div class="content centralized">
+                <h1>Inventory & Sales Management System</h1>
+                <h2>Project Overview Presentation</h2>
+                <p class="subtitle">A Comprehensive Solution for Retail Business Management</p>
+                <div class="start-btn" onclick="nextSlide()">Start Presentation <i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <!-- Slide 1: Introduction -->
+        <div class="slide" id="slide-1">
+            <div class="content">
+                <h3>01 / Introduction</h3>
+                <h1>Overview</h1>
+                <p class="lead">Robust. Centralized. Efficient.</p>
+                <div class="text-block">
+                    The <strong>Inventory & Sales Management System</strong> is a robust web-based application designed to streamline business operations. 
+                    It provides a centralized platform for:
+                    <ul>
+                        <li><i class="fas fa-box"></i> Tracking Stock</li>
+                        <li><i class="fas fa-cash-register"></i> Managing Sales</li>
+                        <li><i class="fas fa-truck"></i> Handling Purchases</li>
+                        <li><i class="fas fa-users"></i> Maintaining Relationships</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Problem & Solution -->
+        <div class="slide" id="slide-2">
+            <div class="split-layout">
+                <div class="left">
+                    <h3>02 / Context</h3>
+                    <h1>The Problem</h1>
+                    <div class="card error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Managing inventory manually led to stock discrepancies, lost sales data, and difficulty in tracking profitability.</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>The Solution</h1>
+                    <div class="card success">
+                        <i class="fas fa-check-circle"></i>
+                        <p>An automated, digital system that offers:</p>
+                        <ul>
+                            <li>Real-time stock tracking</li>
+                            <li>Automated calculations (Sales & Profit)</li>
+                            <li>Integrated management of all entities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Technology Stack -->
+        <div class="slide" id="slide-3">
+            <div class="content">
+                <h3>03 / Architecture</h3>
+                <h1>Technology Stack</h1>
+                <div class="grid-3">
+                    <div class="tech-card">
+                        <i class="fab fa-php"></i>
+                        <h4>Backend</h4>
+                        <p>PHP (Native) - Lightweight & Fast</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Database</h4>
+                        <p>MySQL/MariaDB - Relational Integrity</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fab fa-html5"></i>
+                        <h4>Frontend</h4>
+                        <p>HTML5, CSS3, JS - Responsive UI</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Server</h4>
+                        <p>Apache (XAMPP Environment)</p>
+                    </div>
+                    <div class="tech-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Security</h4>
+                        <p>Session-auth & Bcrypt hashing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Dashboard -->
+        <div class="slide" id="slide-4">
+            <div class="content">
+                <h3>04 / Features</h3>
+                <h1>Dashboard & Analytics</h1>
+                <p>Instant business insights at a glance.</p>
+                <div class="mockup-container">
+                    <div class="kpi-mockup">
+                        <div class="kpi"><span>Total Products</span> <strong>120</strong></div>
+                        <div class="kpi"><span>Sales Today</span> <strong>$1,250</strong></div>
+                        <div class="kpi"><span>Profit Today</span> <strong>$450</strong></div>
+                    </div>
+                    <div class="feature-list">
+                        <p><i class="fas fa-check"></i> <strong>Real-time</strong> revenue tracking</p>
+                        <p><i class="fas fa-check"></i> <strong>Grid-based</strong> responsive layout</p>
+                        <p><i class="fas fa-check"></i> <strong>Sidebar</strong> navigation for quick access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Inventory Mgmt -->
+        <div class="slide" id="slide-5">
+            <div class="content">
+                <h3>05 / Core Modules</h3>
+                <h1>Inventory Management</h1>
+                <div class="list-cards">
+                    <div class="list-card">
+                        <h4>Product Details</h4>
+                        <p>Name, Description, Cost & Selling Price</p>
+                    </div>
+                    <div class="list-card">
+                        <h4>Stock Control</h4>
+                        <p>Real-time quantity tracking with Low Stock alerts</p>
+                    </div>
+                    <div class="list-card">
+                        <h4>Audit Trail</h4>
+                        <p>Stock Movements log for every adjustment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Operational Flows -->
+        <div class="slide" id="slide-6">
+            <div class="split-layout">
+                <div class="left">
+                    <h2><i class="fas fa-shopping-cart"></i> Sales Module</h2>
+                    <ul>
+                        <li>Invoice generation</li>
+                        <li><strong>Auto-deduction</strong> of stock</li>
+                        <li>Linking to Customers</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h2><i class="fas fa-truck-loading"></i> Purchases Module</h2>
+                    <ul>
+                        <li>Record incoming stock</li>
+                        <li>Status tracking (Pending/Received)</li>
+                        <li><strong>Auto-increment</strong> of stock</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: CRM & SRM -->
+        <div class="slide" id="slide-7">
+            <div class="content">
+                <h3>07 / Relationships</h3>
+                <h1>CRM & SRM</h1>
+                <div class="cards-SideBySide">
+                    <div class="big-card blue">
+                        <i class="fas fa-users"></i>
+                        <h2>Customers</h2>
+                        <p>Maintains buyer database with contact details for future marketing and relationship building.</p>
+                    </div>
+                    <div class="big-card green">
+                        <i class="fas fa-store"></i>
+                        <h2>Suppliers</h2>
+                        <p>Database of vendors to streamline reordering processes and track goods sources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Database -->
+        <div class="slide" id="slide-8">
+            <div class="content">
+                <h3>08 / Technical</h3>
+                <h1>Database Architecture</h1>
+                <div class="diagram">
+                    <div class="table-node">Products</div>
+                    <div class="arrow">⬇</div>
+                    <div class="row">
+                        <div class="table-node">Sales Items</div>
+                        <div class="table-node">Purchase Items</div>
+                    </div>
+                    <div class="arrow">⬇</div>
+                    <div class="row">
+                        <div class="table-node">Sales</div>
+                        <div class="table-node">Purchases</div>
+                    </div>
+                </div>
+                <p class="caption">Normalized Relational Design with Foreign Keys</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Security -->
+        <div class="slide" id="slide-9">
+            <div class="content">
+                <h3>09 / Reliability</h3>
+                <h1>User Mgmt & Security</h1>
+                <div class="grid-2">
+                    <div>
+                        <h4>Role-Based Access</h4>
+                        <ul>
+                            <li><strong>Admin:</strong> Full System Access</li>
+                            <li><strong>Staff:</strong> Daily Operations Only</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Security Measures</h4>
+                        <ul>
+                            <li><i class="fas fa-lock"></i> Secure Login flows</li>
+                            <li><i class="fas fa-key"></i> Bcrypt Password Hashing</li>
+                            <li><i class="fas fa-shield-alt"></i> Session Validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Roadmap -->
+        <div class="slide" id="slide-10">
+            <div class="content">
+                <h3>10 / The Future</h3>
+                <h1>Future Roadmap</h1>
+                <div class="timeline">
+                    <div class="milestone">
+                        <div class="dot"></div>
+                        <p>Mobile App Integration</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="dot"></div>
+                        <p>Advanced Reporting Charts</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="dot"></div>
+                        <p>Multi-Branch Support</p>
+                    </div>
+                    <div class="milestone">
+                        <div class="dot"></div>
+                        <p>Barcode Scanning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: End -->
+        <div class="slide" id="slide-11">
+            <div class="content centralized">
+                <h1>Thank You</h1>
+                <p>Any Questions?</p>
+                <div class="start-btn" onclick="location.reload()"><i class="fas fa-redo"></i> Replay</div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="controls">
+            <button id="prevBtn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <button id="nextBtn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="page-number" id="pageNumber">1 / 12</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
